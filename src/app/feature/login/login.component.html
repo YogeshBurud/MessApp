@@ -1,0 +1,36 @@
+<div class="login-section">
+    <div class="card">
+        <div class="card-header">
+            <h3>Login</h3>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-control">
+                    <label for="username">UserName: </label>
+                    <input id="username" type="text" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Username is required</div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password: </label>
+                    <input id="password" type="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+                </div>
+                <div class="form-control btn-submit-section">
+                    <button type="submit">Submit</button>
+                </div>
+                <div class="form-control register-user">
+                    <div class="">
+                        <a href="/register">Register New User</a>
+                    </div>
+                    <div class="">
+                        <a href="/">Forget Password</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

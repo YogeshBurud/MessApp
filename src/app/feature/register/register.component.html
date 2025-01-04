@@ -1,0 +1,39 @@
+<div class="login-section">
+    <div class="card">
+        <div class="card-header">
+            <h3>Sign Up</h3>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-control">
+                    <label for="email">Email: </label>
+                    <input id="email" type="text" formControlName="email">
+                </div>
+                <div class="form-control">
+                    <label for="password">Password: </label>
+                    <input id="password" type="text" formControlName="password">
+                </div>
+                <div class="form-control">
+                    <label for="confirmPassword">Confirm Password: </label>
+                    <input id="confirmPassword" type="text" formControlName="confirmPassword">
+                </div>
+
+                <div class="form-control">
+                    <h3>Select Profile: </h3>
+                    <div class="profile-section">
+                          <input type="radio" id="admin" name="radio" value="Admin">
+                          <label for="admin">Admin</label>
+                          <input type="radio" id="owner" name="radio" value="Owner">
+                          <label for="owner">Owner</label><br>
+                          <input type="radio" id="customer" name="radio" value="Customer">
+                          <label for="customer">Customer</label>
+                    </div>
+                </div>
+
+                <div class="form-control btn-submit-section">
+                    <button type="submit" [disabled]="!loginForm.valid">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

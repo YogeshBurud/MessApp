@@ -1,0 +1,15 @@
+.sidebar-section{
+    ul{
+        li{
+            padding : 16px;
+            cursor: pointer;
+            span {
+                padding-right: 16px;
+                font-size: 20px;
+            }
+        }
+        :hover{
+            background-color: #006293;
+        }
+    }
+}

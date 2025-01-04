@@ -1,0 +1,21 @@
+<div class="main-container">
+    <div class="sidebar">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="section">
+        <div class="header">
+            <app-header></app-header>
+        </div>
+        <div class="main-body-section">
+            <div *ngIf="isAdmin">
+                <app-admin-dashboard></app-admin-dashboard>
+            </div>
+            <div *ngIf="isOwner">
+                <app-owner-dashboard></app-owner-dashboard>
+            </div>
+            <div *ngIf="isCustomer">
+                <app-customer-dashboard></app-customer-dashboard>
+            </div>
+        </div>
+    </div>
+  </div>

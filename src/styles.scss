@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+app-sidebar, app-home, app-header{
+    width:100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* css for login start */
+
+.login-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .card {
+        background: #f2f2f2;
+        padding: 2rem;
+        box-shadow: 0 0 10px #888;
+        border-radius: 10px;
+        min-width: 30%;
+
+        .card-header {
+            padding: 0rem 0 1rem;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .card-body {
+
+            .form-control {
+                padding: 0 0 1rem;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+
+                input {
+                    min-height: 26px;
+                    width: 100%;
+                    font-size: 16px;
+                    margin-top: 0.5rem;
+                }
+
+                input.is-invalid{
+                    border-color: #f00;
+                }
+
+                .invalid-feedback{
+                    color: #f00;
+                }
+            }
+
+            .btn-submit-section {
+
+                button {
+                    cursor: pointer;
+                    padding: 0.5rem 3rem;
+                    background-color: #00699e;
+                    color: #fff;
+                    border: none;
+                    font-size: 16px;
+                    box-shadow: 0 0 10px #888;
+                    border-radius: 2px;
+                }
+            }
+            .btn-submit-section{
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: 1rem 0;
+            }
+            
+            .register-user{
+                font-size: 16px;
+                color: #08c;
+                justify-content: space-between;
+                flex-direction: row;
+                gap:3rem;
+            }
+
+            .profile-section{
+                display: flex;
+                align-items: center;
+            
+                label{
+                    padding-right: 1rem;
+                }
+
+                input{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+/* css for login page end */
